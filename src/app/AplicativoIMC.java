@@ -15,6 +15,8 @@ public class AplicativoIMC {
 		System.out.print("Informe o peso: ");
 		pessoa.peso = Integer.parseInt(scan.nextLine());
 		
+		scan.close();
+		
 		System.out.println("Sua situação com os dados informados é: " + pessoa.calculaIMC());
 	}
 }
