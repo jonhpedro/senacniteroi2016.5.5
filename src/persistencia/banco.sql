@@ -1,0 +1,13 @@
+drop database if exists projetobd;
+
+create database projetobd;
+
+use projetobd;
+
+create table produto (
+	id bigint primary key auto_increment,
+	nmProduto varchar(50) not null,
+	descProduto varchar(255),
+	preco float8 not null,
+	quantidade int not null
+);
