@@ -20,7 +20,7 @@ public class ConnectionDAO {
 
 	protected Connection getConnection() throws SQLException {
 		// URL de conexao com o banco de dados
-		String url = "jdbc:mysql://localhost/projetodb";
+		String url = "jdbc:mysql://localhost/projetobd";
 		
 		Connection conn = DriverManager.getConnection(url, "root", "");
 		return conn;

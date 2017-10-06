@@ -11,3 +11,8 @@ create table produto (
 	preco float8 not null,
 	quantidade int not null
 );
+
+insert into produto 
+values (null, "Camisa", "Camisa Senac TI", 45.00, 20);
+
+select * from produto;
