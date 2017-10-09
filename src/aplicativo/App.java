@@ -12,10 +12,10 @@ public class App {
 		Produto produto = new Produto();
 		
 		// Atribuição dos valores
-		produto.setNmProduto("Controle");
-		produto.setDescProduto("Controle para Datashow Epson");
-		produto.setPreco(135.70);
-		produto.setQuantidade(200);
+		produto.setNmProduto("Comida");
+		produto.setDescProduto("O povo está com fome");
+		produto.setPreco(111135.70);
+		produto.setQuantidade(1);
 		
 		/** banco de dados */
 		ProdutoDAO pd = new ProdutoDAO();

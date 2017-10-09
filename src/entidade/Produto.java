@@ -1,11 +1,12 @@
 package entidade;
 
+// POJO - Plain Old Java Object
 public class Produto {
 
-	private Long id;
+	private Long id; // é maior int
 	private String nmProduto;
 	private String descProduto;
-	private Double preco;
+	private Double preco; // é maior q float
 	private Integer quantidade;
 	
 	public Produto() {

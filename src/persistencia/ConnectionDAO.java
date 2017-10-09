@@ -7,8 +7,8 @@ import java.sql.SQLException;
 // responsavel por abrir a conexao com o banco
 public class ConnectionDAO {
 
+	// construtor sem argumentos
 	public ConnectionDAO() {
-
 		try {
 		// Definir a biblioteca (API), que sera responsavel pela comunicação com o banco de dados
 			Class.forName("com.mysql.jdbc.Driver");
@@ -18,13 +18,14 @@ public class ConnectionDAO {
 		}
 	}
 
+	// JDBC - Java DataBase Connection
 	protected Connection getConnection() throws SQLException {
 		// URL de conexao com o banco de dados
 		String url = "jdbc:mysql://localhost/projetobd";
 		
 		Connection conn = DriverManager.getConnection(url, "root", "");
 		return conn;
-	}
+	} 
 	
 	public static void main(String[] args) throws SQLException {
 		ConnectionDAO db = new ConnectionDAO();
