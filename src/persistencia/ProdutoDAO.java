@@ -92,7 +92,7 @@ public class ProdutoDAO extends ConnectionDAO {
 
 		try {
 			conn = getConnection();
-			stmt = conn.prepareStatement("select * from produto where lower(nome) like ?");
+			stmt = conn.prepareStatement("select * from produto where lower(nmProduto) like ?");
 
 			stmt.setString(1, "%" + nome.toLowerCase() + "%");
 

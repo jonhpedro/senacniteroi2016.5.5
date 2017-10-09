@@ -13,6 +13,11 @@ public class Produto {
 
 	}
 
+	@Override
+	public String toString() {
+		return id + "\n " + nmProduto + "\n " + descProduto + "\n " + preco + "\n " + quantidade;
+	}
+
 	public Long getId() {
 		return id;
 	}
