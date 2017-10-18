@@ -11,16 +11,21 @@
 						<th class="text-center">Nome</th>
 						<th class="text-center">Email</th>
 						<th class="text-center">Telefone</th>
+						<th class="text-center">Excluir</th>
 					</tr>
 				</thead>
 				<tbody>
-				<c:forEach var="contato" items="${requestScope.contatos}">
+				<!-- for(Contato c : listaContato) -->
+				<c:forEach var="contato" items="${contatos}" varStatus="lista">
 					<tr>
 					<!-- EL - Expression Language -->
 						<td>${contato.id}</td>
 						<td>${contato.nome}</td>
 						<td>${contato.email}</td>
 						<td>${contato.telefone}</td>
+						<td><a href="excluir?id=${lista.index}">
+							<span class="glyphicon glyphicon-trash"></span>
+						</a></td>
 					</tr>
 				</c:forEach>
 				</tbody>

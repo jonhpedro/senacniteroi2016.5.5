@@ -15,10 +15,10 @@
 				<tbody>
 					<tr>
 					<!-- EL - Expression Language -->
-						<td>${requestScope.contato.id}</td>
-						<td>${requestScope.contato.nome}</td>
-						<td>${requestScope.contato.email}</td>
-						<td>${requestScope.contato.telefone}</td>
+						<td>${contato.id}</td>
+						<td>${contato.nome}</td>
+						<td>${contato.email}</td>
+						<td>${contato.telefone}</td>
 					</tr>
 				</tbody>
 			</table>
