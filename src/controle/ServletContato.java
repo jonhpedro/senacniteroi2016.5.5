@@ -10,14 +10,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import entidade.Contato;
 
 @WebServlet({ "/cadastrar", "/excluir", "/buscar" })
 public class ServletContato extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	
+	private static List<Contato> listaContatos = new ArrayList<Contato>();
+	
 	public ServletContato() {
 		super();
 	}
@@ -54,10 +55,8 @@ public class ServletContato extends HttpServlet {
 		// vamos encaminhar a requisição a quem de direito (contatos.jsp)
 		request.getRequestDispatcher("contato.jsp").forward(request, response);
 	}
-
+	
 	private void buscar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		List<Contato> listaContatos = new ArrayList<Contato>();
-		HttpSession session = request.getSession();
 
 		listaContatos.add(new Contato());
 		listaContatos.get(0).setId(new Long(new Random().nextInt(100)));
@@ -77,21 +76,14 @@ public class ServletContato extends HttpServlet {
 		listaContatos.get(2).setEmail("joao@gmail.com");
 		listaContatos.get(2).setTelefone("(21) 2633-1485");
 
-		session.setAttribute("lista", listaContatos);
-
 		request.setAttribute("contatos", listaContatos);
 		request.getRequestDispatcher("contatos.jsp").forward(request, response);
 	}
 
-	@SuppressWarnings("unchecked")
 	private void excluir(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		List<Contato> listaContatos = new ArrayList<Contato>();
-		HttpSession session = request.getSession();
 
 		int id = Integer.parseInt(request.getParameter("id"));
-
-		listaContatos = (ArrayList<Contato>) session.getAttribute("lista");
 
 		listaContatos.remove(id);
 
