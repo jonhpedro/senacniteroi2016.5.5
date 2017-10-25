@@ -1,5 +1,24 @@
 @import url(http://fonts.googleapis.com/css?family=Kreon:400,700);
 
+#txtLogo {
+	padding-left: 17%;
+	color: white;
+}
+
+@media screen and ( max-width : 400px) {
+	#logo {
+		width: 150px;
+	}
+	#txtLogo {
+		padding-left: 0 !important;
+		text-shadow: 2px 2px black;
+	}
+	
+	#teste {
+		display: none
+	}
+}
+
 html, body {
 	height: 100%;
 	/* The html and body elements cannot have any padding or margin. */
@@ -192,7 +211,8 @@ section {
 }
 
 .bg-1 {
-	background: url('http://construcaoedecoracaodecozinhas.com/wp-content/gallery/cozinha-mineira/cozinha-mineira-10.jpg')
+	background:
+		url('http://construcaoedecoracaodecozinhas.com/wp-content/gallery/cozinha-mineira/cozinha-mineira-10.jpg')
 		no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -210,7 +230,8 @@ section {
 }
 
 .bg-3 {
-	background: url('http://construcaoedecoracaodecozinhas.com/wp-content/gallery/cozinha-mineira/cozinha-mineira-10.jpg')
+	background:
+		url('http://construcaoedecoracaodecozinhas.com/wp-content/gallery/cozinha-mineira/cozinha-mineira-10.jpg')
 		no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
